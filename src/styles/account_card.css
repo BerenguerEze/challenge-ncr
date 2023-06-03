@@ -1,0 +1,14 @@
+.Card{
+    margin: 0.5%;
+    width: 12em;
+    border-radius: 5%;
+    background-color: #54b848;
+    text-align: center;
+}
+.Card > p {
+    background-color:transparent;
+    color: aliceblue;
+}
+.Card:Hover {
+    background-color: #7fb17a;
+}

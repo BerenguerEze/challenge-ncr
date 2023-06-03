@@ -1,8 +1,10 @@
-export function account_card() {
+import "../styles/account_card.css"
+function AccountCard({tipoCuenta,Nro}) {
     return (
-        <div className="App">
-          <p>Cuenta Corriente</p>
-          <p>Nro:2314123532</p>
+        <div className="Card">
+          <p>{tipoCuenta}</p>
+          <p>Nro:{Nro}</p>
         </div>
       );
 }
+export default AccountCard;

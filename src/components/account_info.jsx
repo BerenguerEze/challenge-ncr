@@ -1,7 +1,7 @@
-export function account_info() {
+function AccountInfo() {
     return (
         <>
-            <div className="App">
+            <div>
                 <h4>Consulta Saldo</h4>
                 <h3>Este es tu saldo actual</h3>
             </div>
@@ -13,3 +13,4 @@ export function account_info() {
         </>
       );
 }
+export default AccountInfo;
