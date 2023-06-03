@@ -8,11 +8,9 @@ import './App.css';
 
 function App() {
   const [mostrarAccountInfo, setMostrarAccountInfo] = useState(false);
-  const [mostrarSection, setMostrarSection] = useState(true);
 
   const cambiarComponente = () => {
     setMostrarAccountInfo(!mostrarAccountInfo);
-    setMostrarSection(!mostrarSection);
   };
 
   const accountData = [
@@ -28,9 +26,11 @@ function App() {
       <div>
         <p>Consulta de Saldo</p>
         <h4>Seleccione la cuenta a consultar</h4>
-      </div>
-      {mostrarSection && (
-        <section className="Grid">
+      </div> 
+      {mostrarAccountInfo ? (
+        <AccountInfo />
+      ) : (
+        <section className={"Grid"}>
           {accountData.map((account) => (
             <AccountCard
               Nro={account.id}
@@ -38,10 +38,9 @@ function App() {
               onClick={cambiarComponente}
             />
           ))}
-        </section>
+        </section>  
       )}
-      {mostrarAccountInfo && <AccountInfo/>}
-      <Footer />
+      <Footer onClick={cambiarComponente} />
     </>    
   );
 }

@@ -1,9 +1,9 @@
 import "../styles/footer.css";
-function Footer() {
+function Footer({onClick}) {
     return (
         <>
           <hr/>
-          <button>Salir</button>
+          <button onClick={onClick}>Salir</button>
         </>
       );
 }
